@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Check Boxes</title>
+    <style type="text/css">
+    	body {background-color: #c3e6e0;}
+        form {display: inline}
+        button {display: inline}
+    </style>
+    
+</head>
+
+<body >
+    <h1>Check Boxes</h1>
+    <input type="checkbox" id="check">
+    <label id="checkLabel">check all</label>
+    <br>
+    <br>
+    <br>
+    <input type="checkbox" id="first" name= "box"> first </input>
+    <br>
+    <input type="checkbox" id="second" name= "box"> second </input>
+    <br>
+    <input type="checkbox" id="third" name= "box"> third </input>
+    <br>
+    <input type="checkbox" id="fourth" name= "box"> fourth </input>
+    <br>
+    <input type="checkbox" id="fifth" name= "box"> fifth </input>
+ 
+</body>
+
+<script language="javascript">
+  
+    clicked = false
+    document.getElementById('check').onclick = function() {
+        if (clicked == false) {
+            document.getElementById('checkLabel').innerText = 'uncheck all';
+            checkboxes = document.getElementsByName('box');
+            for (checkbox of checkboxes) {
+                checkbox.checked = true;
+            }
+            clicked = true;
+        } else {
+            document.getElementById('checkLabel').innerText = 'check all';
+            checkboxes = document.getElementsByName('box');
+            for (checkbox of checkboxes) {
+                checkbox.checked = false;
+            }
+            clicked = false;
+        }    
+    }
+
+    
+</script>
+</html>
+
+
+
+
+
+
+
+
